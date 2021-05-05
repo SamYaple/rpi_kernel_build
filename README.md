@@ -8,11 +8,13 @@ A script for building a kernel targeting the Raspberry Pi 4. Inspiration for thi
 
        cd /usr/src
        git clone --mirror --bare git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git
+       cd ./linux.git
+       git remote add upstream rasperrypi https://github.com/raspberrypi/linux
 
 2. Clone specific tag/branch into `/usr/src/linux-git-5.11.16`
 
        cd /usr/src
-       git clone --single-branch --branch 5.11.16 linux.git linux-git-5.11.16
+       git clone --single-branch --branch v5.11.16 linux.git linux-git-5.11.16
 
 3. (Optional) Create symlink for `/usr/src/linux -> /usr/src/linux-git-5.11.16`
         
